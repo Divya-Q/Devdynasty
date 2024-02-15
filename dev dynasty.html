@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scrolling Animation Website</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #fff;
+            overflow: hidden;
+            /* Hide content overflow */
+        }
+
+        section {
+            position: relative;
+            height: 100vh;
+            overflow: hidden;
+            /* Hide content overflow within sections */
+        }
+
+        .background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background-size: cover;
+            background-position: center;
+            transition: opacity 0.5s ease-in-out;
+        }
+
+        #home {
+            background-image: url('file:///C:/Users/haifa/Downloads/Hi%20%21/1.jpg');
+        }
+
+        #objectives {
+            background-image: url('objectives-image.jpg');
+        }
+
+        #events {
+            background-image: url('C:/Users/haifa/Downloads/WhatsApp Image 2024-02-15 at 3.22.04 PM.jpeg');
+        }
+
+        #about {
+            background-image: url('about-image.jpg');
+        }
+
+        #contact {
+            background-image: url('C:/Users/haifa/Downloads/WhatsApp Image 2024-02-15 at 3.49.47 PM.jpeg');
+        }
+
+        .slide-in {
+            position: absolute;
+            top: 50%;
+            left: 30%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            width: 80%;
+            /* Adjust the width as needed */
+        }
+
+        .slide-in h2,
+        .slide-in h3,
+        .slide-in p {
+            animation: slideIn 1s ease-in-out;
+            font-size: 2.5em;
+            /* Adjust the font size as needed */
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateX(-100%);
+            }
+
+            to {
+                transform: translateX(0);
+            }
+        }
+
+        nav {
+            background-color: #457aec;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            width: 100%;
+            z-index: 1000;
+        }
+
+        nav a {
+            color: #ffffff;
+            text-decoration: none;
+            margin: 0 15px;
+        }
+
+        /* Style for Learn More button */
+        .learn-more-btn {
+            position: absolute;
+            top: 90%;
+            left: 50%;
+            transform: translateX(-50%);
+            padding: 20px 40px;
+            background-color: rgba(245, 239, 239, 0);
+            color: #fff;
+            border: 2px solid rgba(35, 69, 163, 0.856);
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        /* Style for Register Now button */
+        .register-btn {
+            padding: 15px 30px;
+            background-color: #2b208a;
+            color: #fff;
+            text-decoration: none;
+            border: none;
+            cursor: pointer;
+            position: absolute;
+            bottom: 10%;
+            left: 55%;
+        }
+
+        /* Style for About Us heading */
+        #about {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 100px;
+        }
+
+        #about h2 {
+            color: #457aec;
+            font-family: 'Roboto', sans-serif;
+            font-size: 3em; /* Increased font size */
+            margin-bottom: 500px;
+        }
+
+        #about p {
+            color: #000000;
+            text-align: left;
+            max-width: 50%;
+        }
+
+        #about img {
+            width: 40%;
+            max-width: 400px;
+        }
+
+        #about .register-btn {
+            position: absolute;
+            bottom: 30%;
+            left: 40%;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#objectives">Objectives</a>
+        <a href="#events">Upcoming Events</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <section id="home">
+        <div class="background"></div>
+        <div class="slide-in">
+            <h2>Hi!</h2>
+            <h3>Welcome to DevDynasty </h3>
+            <p>Unlocking the potential of the Digital Realm</p>
+            <!-- Learn More button -->
+            <button class="learn-more-btn" onclick="navigateToAbout()">Learn More</button>
+        </div>
+    </section>
+
+    <section id="objectives">
+        <div class="background"></div>
+        <div>
+            <h2>Objectives Section</h2>
+            <p>Our objectives are...</p>
+        </div>
+    </section>
+
+    <section id="events">
+        <div class="background"></div>
+        <div>
+            <h2>Upcoming Events Section</h2>
+            <p>Check out our upcoming events...</p>
+        </div>
+    </section>
+
+    <section id="about">
+        <div class="background"></div>
+        <h2>About Us</h2> <!-- About Us heading -->
+        <div style="display: flex; align-items: center; justify-content: space-between;">
+            <img src="C:\Users\haifa\Downloads\WhatsApp Image 2024-02-15 at 9.34.00 AM.jpeg" alt="About Us"
+                style="width: 40%; max-width: 300px;">
+            <p style="color: #000000; text-align: left; max-width: 50%;">The College's Web App Development Club is a vibrant and dynamic community dedicated to fostering innovation
+                and expertise in the realm of web application development.
+                Comprised of passionate students with a shared interest in technology, our club serves as a hub for
+                collaboration, learning, and hands-on experience.
+                Whether you're a seasoned coder or just exploring the world of development, we offer a welcoming
+                environment where members can expand their skill set, tackle real-world projects, and stay abreast of the
+                latest industry trends. From workshops and hackathons to guest lectures and networking events, we provide
+                ample opportunities for growth and professional development. Join us on our journey to push the boundaries
+                of web technology and make a meaningful impact in the digital landscape.</p>
+            <p style="color: #2b208a;"><button class="register-btn" onclick="navigateToRegistration()">Register
+                    Now</button> </p>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="background"></div>
+        <div>
+            <h2>Contact Section</h2>
+            <p></p>
+        </div>
+    </section>
+
+    <script>
+        // Change background images dynamically
+        const sections = document.querySelectorAll('section');
+
+        sections.forEach(section => {
+            const background = section.querySelector('.background');
+            const backgroundImage = section.style.backgroundImage;
+
+            section.addEventListener('mouseenter', () => {
+                background.style.opacity = 0;
+            });
+
+            section.addEventListener('mouseleave', () => {
+                background.style.opacity = 1;
+            });
+        });
+
+        // Function to navigate to the About section
+        function navigateToAbout() {
+            const aboutSection = document.getElementById('about');
+            aboutSection.scrollIntoView({
+                behavior: 'smooth'
+            });
+        }
+
+        // Function to navigate to the registration link
+        function navigateToRegistration() {
+            window.open('https://forms.gle/sUzBx8PXw9gwWSE2A', '_blank');
+        }
+    </script>
+</body>
+
+</html>
